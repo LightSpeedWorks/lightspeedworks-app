@@ -1,12 +1,11 @@
 'use strict';
 
 try {
-	console.log('app.js starting...');
+	console.log('app.js: starting port ' + port + ' ...');
 
 	const http = require('http');
 
 	const port = process.env.PORT || 3000;
-	console.log('port ', port);
 
 	const server = http.createServer(function (req, res) {
 		console.log(req.method, req.url);
@@ -26,8 +25,6 @@ try {
 	server.listen(port, function () {
 		console.log('Server running at http://localhost:' + port + '/');
 	});
-
-	console.log('app started.');
 }
 catch (e) {
 	console.warn(e);
