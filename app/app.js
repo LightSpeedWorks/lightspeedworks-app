@@ -12,14 +12,15 @@ try {
 		console.log(req.method, req.url);
 		res.statusCode = 200;
 		res.setHeader('Content-Type', 'text/plain');
-		res.end('Hello World\n');
-	/*
+		//res.end('Hello World\n');
+
 		res.end(['Hello World',
 			'__dirname = ' + __dirname,
 			'__filename = ' + __filename,
 			'process.cwd() = ' + process.cwd(),
+			'process.version = ' + process.version,
 		].join('\n'));
-	*/
+
 	});
 
 	server.listen(port, function () {
