@@ -1,11 +1,10 @@
 'use strict';
 
 try {
-	console.log('app.js: starting port ' + port + ' ...');
-
 	const http = require('http');
-
 	const port = process.env.PORT || 3000;
+
+	console.log('app.js: starting port ' + port + ' ...');
 
 	const server = http.createServer(function (req, res) {
 		console.log(req.method, req.url);
