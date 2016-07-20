@@ -5,8 +5,8 @@ try {
 
 	const http = require('http');
 
-	const hostname = '127.0.0.1';
 	const port = process.env.PORT || 3000;
+	console.log('port ', port);
 
 	const server = http.createServer(function (req, res) {
 		console.log(req.method, req.url);
@@ -22,9 +22,11 @@ try {
 	*/
 	});
 
-	server.listen(port, hostname, function () {
-		console.log('Server running at http://' + hostname + ':' + port + '/');
+	server.listen(port, function () {
+		console.log('Server running at http://localhost:' + port + '/');
 	});
+
+	console.log('app started.');
 }
 catch (e) {
 	console.warn(e);
