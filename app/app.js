@@ -17,6 +17,8 @@ try {
 			'__filename = ' + __filename,
 			'process.cwd() = ' + process.cwd(),
 			'process.version = ' + process.version,
+			'process.arch = ' + process.arch,
+			'process.platform = ' + process.platform,
 		].join('\n'));
 
 	});
